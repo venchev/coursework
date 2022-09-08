@@ -1,0 +1,11 @@
+#!/bin/bash
+users=`cat /opt/user`
+passwords=`cat /opt/pass`
+
+adding () {
+for i in $users
+do
+sudo useradd $i -p $passwords
+done
+}
+adding
